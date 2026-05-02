@@ -1,6 +1,16 @@
 {
-  "rewrites": [
-    { "source": "/api/search", "destination": "/api/search" },
-    { "source": "/(.*)",       "destination": "/index.html"  }
+  "version": 2,
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "framework": null,
+  "routes": [
+    {
+      "src": "/api/search",
+      "dest": "/api/search.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
