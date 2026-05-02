@@ -19,73 +19,62 @@ html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden;}
 body::before{content:'';position:fixed;top:-100px;left:50%;transform:translateX(-50%);width:700px;height:340px;background:radial-gradient(ellipse,rgba(245,166,35,.07) 0%,transparent 70%);pointer-events:none;z-index:0;}
 
-/* ── HEADER ── */
-header{position:relative;text-align:center;padding:2.8rem 1rem 1.8rem;z-index:1;}
-.logo{font-family:'Syne',sans-serif;font-size:clamp(2.2rem,6vw,3.8rem);font-weight:800;letter-spacing:-1px;line-height:1;margin-bottom:.4rem;}
+/* HEADER */
+header{position:relative;text-align:center;padding:2.5rem 1rem 1.6rem;z-index:1;}
+.logo{font-family:'Syne',sans-serif;font-size:clamp(2rem,6vw,3.6rem);font-weight:800;letter-spacing:-1px;line-height:1;margin-bottom:.4rem;}
 .ls{color:var(--accent);}.lp{color:var(--text);}
-.leg{font-size:.48em;background:var(--accent);color:#000;padding:2px 9px;border-radius:5px;vertical-align:middle;margin-left:5px;font-weight:800;}
+.leg{font-size:.46em;background:var(--accent);color:#000;padding:2px 9px;border-radius:5px;vertical-align:middle;margin-left:5px;font-weight:800;}
 .tag{font-size:13px;color:var(--muted);max-width:520px;margin:.3rem auto .8rem;}
 .hbadges{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;}
 .hb{font-size:11px;padding:3px 10px;border-radius:20px;border:1px solid var(--border2);color:var(--muted);background:var(--bg3);}
-.hb.g{border-color:var(--green);color:var(--green);}.hb.p{border-color:var(--purple);color:var(--purple);}
+.hb.g{border-color:var(--green);color:var(--green);}
+.hb.p{border-color:var(--purple);color:var(--purple);}
 
-/* ── SETUP BANNER ── */
-#setupBanner{
-  max-width:860px;margin:0 auto 1.5rem;
-  background:linear-gradient(135deg,rgba(245,166,35,.07),rgba(255,107,53,.05));
-  border:1px solid rgba(245,166,35,.22);border-radius:var(--r);padding:1.25rem 1.5rem;
-  position:relative;z-index:1;
-}
-.sp-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--accent);margin-bottom:.75rem;}
-.sp-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:9px;margin-bottom:1rem;}
-.sp-step{background:var(--bg3);border:1px solid var(--border);border-radius:9px;padding:.75rem;font-size:12px;line-height:1.55;}
-.sp-step strong{display:block;font-size:13px;color:var(--text);margin-bottom:3px;}
-.sp-step a{color:var(--accent);text-decoration:none;}.sp-step a:hover{text-decoration:underline;}
-.sp-step code{background:rgba(255,255,255,.07);padding:1px 5px;border-radius:4px;font-size:11px;}
-#toggleSetup{display:block;margin:.6rem auto 0;background:none;border:none;color:var(--muted);font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:underline;}
+/* MAIN */
+main{max-width:880px;margin:0 auto;padding:0 1rem 3rem;position:relative;z-index:1;}
 
-/* ── MAIN ── */
-main{max-width:860px;margin:0 auto;padding:0 1rem 3rem;position:relative;z-index:1;}
-
-/* ── COUNTRY ── */
+/* COUNTRY */
 .crow{display:flex;align-items:center;gap:7px;margin-bottom:1.2rem;flex-wrap:wrap;}
 .clbl{font-size:12px;color:var(--muted);white-space:nowrap;}
 .cbtn{padding:5px 13px;border-radius:20px;border:1px solid var(--border);background:var(--bg2);color:var(--muted);font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;transition:all .15s;}
 .cbtn:hover{border-color:var(--accent);color:var(--accent);}
 .cbtn.active{background:var(--accent);color:#000;border-color:var(--accent);font-weight:700;}
 
-/* ── SEARCH ── */
+/* SEARCH */
 .swrap{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;box-shadow:0 4px 24px rgba(0,0,0,.4);}
 .srow{display:flex;gap:10px;margin-bottom:1rem;}
 #searchInput{flex:1;background:var(--bg3);border:1px solid var(--border2);border-radius:9px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;padding:.75rem 1.1rem;outline:none;transition:border-color .15s;}
 #searchInput:focus{border-color:var(--accent);}
 #searchInput::placeholder{color:var(--muted);}
 #searchBtn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#000;border:none;border-radius:9px;padding:.75rem 1.4rem;font-family:'DM Sans',sans-serif;font-weight:700;font-size:14px;cursor:pointer;white-space:nowrap;transition:opacity .15s,transform .1s;box-shadow:0 2px 12px rgba(245,166,35,.25);}
-#searchBtn:hover{opacity:.9;}#searchBtn:active{transform:scale(.97);}#searchBtn:disabled{opacity:.4;cursor:not-allowed;}
+#searchBtn:hover{opacity:.9;}
+#searchBtn:active{transform:scale(.97);}
+#searchBtn:disabled{opacity:.4;cursor:not-allowed;}
 .chips{display:flex;flex-wrap:wrap;gap:7px;}
 .chip{padding:4px 12px;background:var(--bg3);border:1px solid var(--border);border-radius:20px;font-size:12px;color:var(--muted);cursor:pointer;transition:all .15s;font-family:'DM Sans',sans-serif;}
 .chip:hover{border-color:var(--accent);color:var(--accent);}
 
-/* ── ERROR ── */
-#errBox{display:none;background:rgba(255,71,87,.07);border:1px solid rgba(255,71,87,.3);border-radius:var(--r);padding:.9rem 1.1rem;color:var(--red);font-size:13px;margin-bottom:1.2rem;line-height:1.6;}
+/* ERROR */
+#errBox{display:none;background:rgba(255,71,87,.07);border:1px solid rgba(255,71,87,.3);border-radius:var(--r);padding:.9rem 1.1rem;color:var(--red);font-size:13px;margin-bottom:1.2rem;line-height:1.7;}
 
-/* ── LOADING ── */
+/* LOADING */
 #loadWrap{display:none;text-align:center;padding:3.5rem 1rem;}
 .spin{width:50px;height:50px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite;margin:0 auto 1rem;}
 @keyframes spin{to{transform:rotate(360deg);}}
 #loadMsg{color:var(--muted);font-size:14px;margin:.3rem 0;}
 .pgwrap{width:280px;height:3px;background:var(--border);border-radius:2px;margin:.9rem auto 0;overflow:hidden;}
-.pgbar{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;animation:pg 4s ease-out forwards;}
-@keyframes pg{from{width:0}to{width:88%}}
+.pgbar{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;animation:pg 5s ease-out forwards;}
+@keyframes pg{from{width:0}to{width:90%}}
 
-/* ── RESULTS ── */
+/* RESULTS */
 #resWrap{display:none;}
 .sumbar{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;margin-bottom:1.2rem;display:flex;align-items:center;gap:9px;flex-wrap:wrap;}
 .sq{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;flex:1;min-width:160px;}
 .ss{font-size:11px;padding:3px 10px;border-radius:20px;background:var(--bg3);border:1px solid var(--border);color:var(--muted);white-space:nowrap;}
 .ss.hi{border-color:var(--accent);color:var(--accent);}
+.ss.gr{border-color:var(--green);color:var(--green);}
 
-/* ── TABS ── */
+/* TABS */
 .tabs{display:flex;gap:6px;margin-bottom:1rem;flex-wrap:wrap;}
 .tab{padding:6px 15px;border-radius:20px;border:1px solid var(--border);background:var(--bg2);color:var(--muted);font-size:12px;font-weight:500;cursor:pointer;transition:all .15s;font-family:'DM Sans',sans-serif;}
 .tab:hover{border-color:var(--accent);color:var(--accent);}
@@ -93,16 +82,16 @@ main{max-width:860px;margin:0 auto;padding:0 1rem 3rem;position:relative;z-index
 .cnt{display:inline-flex;align-items:center;justify-content:center;width:17px;height:17px;border-radius:50%;background:rgba(0,0,0,.2);font-size:10px;margin-left:4px;}
 .tab.active .cnt{background:rgba(0,0,0,.25);}
 
-/* ── SECTION LABEL ── */
+/* SECTION LABEL */
 .dlbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:.7rem;display:flex;align-items:center;gap:8px;}
 .dlbl::after{content:'';flex:1;height:1px;background:var(--border);}
 
-/* ── STORE LINKS ── */
+/* STORE LINKS */
 .slinks{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:1.5rem;}
 .sl{display:flex;align-items:center;gap:5px;padding:6px 12px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;color:var(--text);text-decoration:none;font-size:12px;font-weight:500;font-family:'DM Sans',sans-serif;transition:all .15s;white-space:nowrap;}
 .sl:hover{border-color:var(--accent);color:var(--accent);}
 
-/* ── CARDS GRID ── */
+/* CARDS */
 .cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:12px;margin-bottom:1.5rem;}
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:1rem;display:flex;flex-direction:column;gap:6px;position:relative;overflow:hidden;transition:all .2s;animation:fup .4s ease both;}
 .card:hover{background:var(--bg3);border-color:var(--border2);transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,.4);}
@@ -128,39 +117,41 @@ main{max-width:860px;margin:0 auto;padding:0 1rem 3rem;position:relative;z-index
 .bbtn{display:block;text-align:center;margin-top:auto;padding:9px 0;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);text-decoration:none;font-size:13px;font-weight:600;font-family:'DM Sans',sans-serif;transition:all .15s;}
 .bbtn:hover{background:var(--accent);border-color:var(--accent);color:#000;}
 
-/* ── RECOMMENDATION ── */
+/* RECOMMENDATION */
 .recbox{background:rgba(46,204,138,.05);border:1px solid rgba(46,204,138,.25);border-radius:var(--r);padding:1.1rem 1.2rem;margin-bottom:1.5rem;}
 .rlbl{font-size:11px;color:var(--green);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:.4rem;}
 .rtxt{font-size:13.5px;line-height:1.7;}
 
-/* ── NO RESULTS ── */
+/* NO RESULTS */
 .nores{text-align:center;padding:2.5rem;grid-column:1/-1;color:var(--muted);}
 .nores h3{color:var(--text);margin-bottom:.5rem;font-family:'Syne',sans-serif;}
 
-/* ── HOW IT WORKS ── */
+/* HOW IT WORKS */
 .how{margin-top:3rem;border-top:1px solid var(--border);padding-top:2rem;}
-.htitle{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:var(--muted);margin-bottom:1rem;letter-spacing:1px;}
-.hgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:10px;}
+.htitle{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;color:var(--muted);margin-bottom:1rem;letter-spacing:1px;}
+.hgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;}
 .hcard{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:1rem;}
 .hico{font-size:1.4rem;margin-bottom:.3rem;}
 .hcard h4{font-size:14px;font-weight:700;margin-bottom:.2rem;font-family:'Syne',sans-serif;}
 .hcard p{font-size:12px;color:var(--muted);line-height:1.5;}
 
-/* ── FOOTER ── */
-footer{text-align:center;padding:2rem 1rem;border-top:1px solid var(--border);color:var(--muted);font-size:12px;margin-top:2rem;}
-footer a{color:var(--muted);text-decoration:none;}footer a:hover{color:var(--accent);}
+/* FOOTER */
+footer{text-align:center;padding:1.5rem 1rem;border-top:1px solid var(--border);color:var(--muted);font-size:12px;margin-top:2rem;}
+footer a{color:var(--muted);text-decoration:none;}
+footer a:hover{color:var(--accent);}
 
 @media(max-width:600px){
-  .srow{flex-direction:column;}#searchBtn{width:100%;}
+  .srow{flex-direction:column;}
+  #searchBtn{width:100%;}
   .sumbar{flex-direction:column;align-items:flex-start;}
-  header{padding:2rem 1rem 1.5rem;}
+  header{padding:1.8rem 1rem 1.2rem;}
 }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo"><span class="ls">Smart</span><span class="lp">Price</span><span class="leg">EG</span></div>
+  <div class="logo"><span class="ls">Get</span><span class="lp">Cheaper</span><span class="leg">EG</span></div>
   <p class="tag">Your personal AI shopping agent — deep searches Carrefour, Amazon, Noon, OLX, Facebook Marketplace &amp; every Egyptian market in real time</p>
   <div class="hbadges">
     <span class="hb g">🟢 Real-time Search</span>
@@ -173,45 +164,7 @@ footer a{color:var(--muted);text-decoration:none;}footer a:hover{color:var(--acc
 
 <main>
 
-  <!-- ── SETUP BANNER ── -->
-  <div id="setupBanner">
-    <p class="sp-title">⚙️ One-Time Setup — Deploy FREE on Vercel (no credit card, 3 minutes)</p>
-    <div class="sp-steps" id="spBody">
-      <div class="sp-step">
-        <strong>Step 1 — Get Free SerpApi Key</strong>
-        Sign up free at <a href="https://serpapi.com/users/sign_up" target="_blank">serpapi.com</a><br>
-        Copy your key from the dashboard.<br>
-        <em style="color:var(--muted)">100 searches/month free.</em>
-      </div>
-      <div class="sp-step">
-        <strong>Step 2 — Sign up on Vercel</strong>
-        Go to <a href="https://vercel.com/signup" target="_blank">vercel.com/signup</a><br>
-        Sign up with GitHub (free).<br>
-        <em style="color:var(--muted)">No credit card needed.</em>
-      </div>
-      <div class="sp-step">
-        <strong>Step 3 — Upload Project</strong>
-        Create a GitHub repo → upload the 3 files:<br>
-        <code>index.html</code>, <code>api/search.js</code>, <code>vercel.json</code><br>
-        Then import repo in Vercel.
-      </div>
-      <div class="sp-step">
-        <strong>Step 4 — Add Environment Variable</strong>
-        In Vercel → your project → Settings → Environment Variables:<br>
-        Name: <code>SERPAPI_KEY</code><br>
-        Value: your SerpApi key
-      </div>
-      <div class="sp-step">
-        <strong>Step 5 — Done!</strong>
-        Vercel gives you a URL like<br>
-        <code>smartprice.vercel.app</code><br>
-        Open it — the app works fully. Share with anyone.
-      </div>
-    </div>
-    <button id="toggleSetup" onclick="toggleSetup()">▲ Hide setup instructions</button>
-  </div>
-
-  <!-- ── COUNTRY ── -->
+  <!-- COUNTRY -->
   <div class="crow">
     <span class="clbl">🌍 Country:</span>
     <button class="cbtn active" onclick="setCountry('eg',this)">🇪🇬 Egypt</button>
@@ -222,7 +175,7 @@ footer a{color:var(--muted);text-decoration:none;}footer a:hover{color:var(--acc
     <button class="cbtn" onclick="setCountry('global',this)">🌐 Global</button>
   </div>
 
-  <!-- ── SEARCH ── -->
+  <!-- SEARCH -->
   <div class="swrap">
     <div class="srow">
       <input type="text" id="searchInput"
@@ -232,35 +185,35 @@ footer a{color:var(--muted);text-decoration:none;}footer a:hover{color:var(--acc
     </div>
     <div class="chips">
       <span class="chip" onclick="fillSearch('milk 1 liter')">🥛 milk 1 liter</span>
-      <span class="chip" onclick="fillSearch('olive oil 750ml')">🫙 olive oil</span>
+      <span class="chip" onclick="fillSearch('زيت عباد شمس 1.8 لتر')">🌻 زيت</span>
       <span class="chip" onclick="fillSearch('rice 5kg')">🍚 rice 5kg</span>
       <span class="chip" onclick="fillSearch('sugar 1kg')">🍬 sugar 1kg</span>
-      <span class="chip" onclick="fillSearch('nescafe gold 200g')">☕ Nescafe Gold</span>
-      <span class="chip" onclick="fillSearch('iphone 15 pro egypt')">📱 iPhone 15 Pro</span>
-      <span class="chip" onclick="fillSearch('samsung galaxy s24 egypt')">📱 Galaxy S24</span>
+      <span class="chip" onclick="fillSearch('nescafe gold 200g')">☕ Nescafe</span>
+      <span class="chip" onclick="fillSearch('iphone 15 pro')">📱 iPhone 15</span>
+      <span class="chip" onclick="fillSearch('samsung galaxy s24')">📱 Galaxy S24</span>
       <span class="chip" onclick="fillSearch('laptop dell core i5')">💻 Dell Laptop</span>
       <span class="chip" onclick="fillSearch('شامبو هيد اند شولدرز')">🧴 شامبو</span>
       <span class="chip" onclick="fillSearch('مكيف سبليت 1.5 حصان')">❄️ مكيف</span>
       <span class="chip" onclick="fillSearch('تلفزيون سامسونج 55 بوصة')">📺 تلفزيون</span>
-      <span class="chip" onclick="fillSearch('زيت عباد شمس 1.8 لتر')">🌻 زيت</span>
+      <span class="chip" onclick="fillSearch('olive oil 750ml')">🫙 olive oil</span>
     </div>
   </div>
 
-  <!-- ── ERROR ── -->
+  <!-- ERROR -->
   <div id="errBox"></div>
 
-  <!-- ── LOADING ── -->
+  <!-- LOADING -->
   <div id="loadWrap">
     <div class="spin"></div>
-    <p style="font-size:1.05rem;font-weight:700;color:var(--text)">Searching the internet...</p>
-    <p id="loadMsg">🔍 Querying search engines...</p>
+    <p style="font-size:1.05rem;font-weight:700;color:var(--text)">Searching the internet for Egypt prices...</p>
+    <p id="loadMsg">🔍 Querying Google Shopping Egypt...</p>
     <div class="pgwrap"><div class="pgbar" id="pgbar"></div></div>
   </div>
 
-  <!-- ── RESULTS ── -->
+  <!-- RESULTS -->
   <div id="resWrap">
     <div class="sumbar" id="sumbar"></div>
-    <div class="tabs" id="tabsRow"></div>
+    <div class="tabs"   id="tabsRow"></div>
     <div class="dlbl">🔗 Jump directly to these platforms</div>
     <div class="slinks" id="slinksRow"></div>
     <div id="cardSec"></div>
@@ -270,46 +223,51 @@ footer a{color:var(--muted);text-decoration:none;}footer a:hover{color:var(--acc
     </div>
   </div>
 
-  <!-- ── HOW IT WORKS ── -->
+  <!-- HOW IT WORKS -->
   <div class="how">
     <p class="htitle">HOW IT WORKS</p>
     <div class="hgrid">
-      <div class="hcard"><div class="hico">🛡️</div><h4>Secure &amp; Private</h4><p>Your SerpApi key is stored only on Vercel's server — never in the browser. Zero security risk.</p></div>
-      <div class="hcard"><div class="hico">🛒</div><h4>Egyptian Markets</h4><p>Carrefour Egypt, Amazon.eg, Noon, Jumia, Talabat, B.TECH, 2B, Raneen, Kheir Zaman &amp; more.</p></div>
+      <div class="hcard"><div class="hico">🇪🇬</div><h4>Egypt-Focused Results</h4><p>Every search targets Egyptian platforms and EGP prices specifically — not random global results.</p></div>
+      <div class="hcard"><div class="hico">🛒</div><h4>All Egyptian Markets</h4><p>Carrefour Egypt, Amazon.eg, Noon, Jumia, Talabat, B.TECH, 2B, Raneen, Kheir Zaman &amp; more.</p></div>
       <div class="hcard"><div class="hico">📱</div><h4>Social Media</h4><p>Finds listings on Facebook Marketplace Egypt, OLX.eg, Instagram shops &amp; Telegram deal channels.</p></div>
-      <div class="hcard"><div class="hico">🤖</div><h4>Google Shopping AI</h4><p>SerpApi pulls real Google Shopping results with live prices from across the entire internet.</p></div>
-      <div class="hcard"><div class="hico">💰</div><h4>Cheapest First</h4><p>All results ranked by price ascending — best deal always at the top, no scrolling needed.</p></div>
-      <div class="hcard"><div class="hico">🌍</div><h4>Country Scope</h4><p>Switch between Egypt, Saudi, UAE, UK, USA or Global to compare local prices per region.</p></div>
+      <div class="hcard"><div class="hico">🤖</div><h4>Real-time Prices</h4><p>SerpApi pulls live Google Shopping results. All API calls go through a secure proxy — no CORS errors.</p></div>
+      <div class="hcard"><div class="hico">💰</div><h4>Cheapest First</h4><p>All results ranked by price ascending — best deal always at the top.</p></div>
+      <div class="hcard"><div class="hico">🌍</div><h4>Country Scope</h4><p>Switch to Saudi, UAE, UK, USA or Global to compare prices in other regions too.</p></div>
     </div>
   </div>
 </main>
 
 <footer>
-  Powered by SerpApi · Google Shopping · Open Food Facts · UPC Item DB<br><br>
-  SmartPrice Egypt — Free &amp; Open &nbsp;·&nbsp;
-  <a href="https://serpapi.com/users/sign_up" target="_blank">Get SerpApi Key</a> &nbsp;·&nbsp;
-  <a href="https://vercel.com/signup" target="_blank">Deploy on Vercel (free)</a>
+  Powered by SerpApi · Google Shopping · Open Food Facts · UPC Item DB &nbsp;|&nbsp;
+  <a href="https://serpapi.com/users/sign_up" target="_blank">Get free SerpApi key</a>
 </footer>
 
 <script>
-// ════════════ STATE ════════════
-let COUNTRY = 'eg';
-let activeTab = 'all';
+// ══════════════════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════════════════
+let COUNTRY    = 'eg';
+let activeTab  = 'all';
 let lastResults = [];
-let lastQuery = '';
-let setupOpen = true;
+let lastQuery   = '';
 
-// ════════════ COUNTRY CONFIG ════════════
-const CC = {
-  eg:     { gl:'eg', hl:'ar',  label:'Egypt' },
-  sa:     { gl:'sa', hl:'ar',  label:'Saudi Arabia' },
-  ae:     { gl:'ae', hl:'ar',  label:'UAE' },
-  uk:     { gl:'gb', hl:'en',  label:'UK' },
-  us:     { gl:'us', hl:'en',  label:'USA' },
-  global: { gl:'us', hl:'en',  label:'Global' },
+// ══════════════════════════════════════════════════════
+// COUNTRY KEYWORD MAP
+// Forces country-specific results even though SerpApi
+// free tier requires gl=us
+// ══════════════════════════════════════════════════════
+const COUNTRY_KEYWORDS = {
+  eg:     { en:'egypt EGP price',          ar:'مصر جنيه سعر',        label:'Egypt',        currency:'EGP' },
+  sa:     { en:'saudi arabia SAR price',   ar:'السعودية ريال سعر',   label:'Saudi Arabia', currency:'SAR' },
+  ae:     { en:'UAE dubai AED price',      ar:'الإمارات درهم سعر',   label:'UAE',          currency:'AED' },
+  uk:     { en:'UK GBP price',             ar:'UK GBP price',         label:'UK',           currency:'GBP' },
+  us:     { en:'USA USD price',            ar:'USA USD price',        label:'USA',          currency:'USD' },
+  global: { en:'price buy online',         ar:'سعر شراء',             label:'Global',       currency:''    },
 };
 
-// ════════════ STORE DIRECTORIES ════════════
+// ══════════════════════════════════════════════════════
+// STORE DIRECTORY
+// ══════════════════════════════════════════════════════
 const STORES = {
   eg:{
     '🏪 Supermarkets':[
@@ -319,10 +277,10 @@ const STORES = {
       {n:'Spinneys Egypt',  i:'🛍️', u:q=>`https://www.spinneys-egypt.com/search?q=${q}`},
     ],
     '📦 Online Stores':[
-      {n:'Amazon Egypt',  i:'📦', u:q=>`https://www.amazon.eg/s?k=${q}&language=en_AE`},
-      {n:'Noon Egypt',    i:'🌙', u:q=>`https://www.noon.com/egypt-en/search/?q=${q}`},
-      {n:'Jumia Egypt',   i:'🏪', u:q=>`https://www.jumia.com.eg/catalog/?q=${q}`},
-      {n:'Raneen',        i:'🏠', u:q=>`https://www.raneen.com/search?q=${q}`},
+      {n:'Amazon Egypt', i:'📦', u:q=>`https://www.amazon.eg/s?k=${q}&language=en_AE`},
+      {n:'Noon Egypt',   i:'🌙', u:q=>`https://www.noon.com/egypt-en/search/?q=${q}`},
+      {n:'Jumia Egypt',  i:'🏪', u:q=>`https://www.jumia.com.eg/catalog/?q=${q}`},
+      {n:'Raneen',       i:'🏠', u:q=>`https://www.raneen.com/search?q=${q}`},
     ],
     '💻 Electronics':[
       {n:'B.TECH',    i:'💻', u:q=>`https://www.btech.com/en/catalogsearch/result/?q=${q}`},
@@ -333,7 +291,7 @@ const STORES = {
     '📱 Social & Marketplace':[
       {n:'Facebook Marketplace', i:'📘', u:q=>`https://www.facebook.com/marketplace/search/?query=${q}&location=egypt`},
       {n:'OLX Egypt',            i:'🟠', u:q=>`https://www.olx.com.eg/items/q-${q}`},
-      {n:'Instagram',            i:'📸', u:q=>`https://www.instagram.com/explore/tags/${encodeURIComponent(q.replace(/ /g,''))}`},
+      {n:'Instagram',            i:'📸', u:q=>`https://www.instagram.com/explore/tags/${q}`},
       {n:'Telegram Deals',       i:'✈️', u:_=>`https://t.me/s/egypt_deals`},
     ],
     '🛵 Food & Delivery':[
@@ -396,8 +354,8 @@ const STORES = {
       {n:'eBay',     i:'🔨', u:q=>`https://www.ebay.com/sch/i.html?_nkw=${q}`},
     ],
     '📱 Social':[
-      {n:'Facebook US',   i:'📘', u:q=>`https://www.facebook.com/marketplace/search/?query=${q}`},
-      {n:'Craigslist',    i:'📋', u:q=>`https://www.craigslist.org/search/sss?query=${q}`},
+      {n:'Facebook US',i:'📘', u:q=>`https://www.facebook.com/marketplace/search/?query=${q}`},
+      {n:'Craigslist', i:'📋', u:q=>`https://www.craigslist.org/search/sss?query=${q}`},
     ],
     '🔎 Search':[{n:'Google Shopping',i:'🔎',u:q=>`https://www.google.com/search?tbm=shop&q=${q}`}],
   },
@@ -417,43 +375,43 @@ const STORES = {
   },
 };
 
-// ════════════ SETUP TOGGLE ════════════
-function toggleSetup(){
-  setupOpen = !setupOpen;
-  document.getElementById('spBody').style.display    = setupOpen ? '' : 'none';
-  document.getElementById('toggleSetup').textContent = setupOpen ? '▲ Hide setup instructions' : '▼ Show setup instructions';
-}
-
-// ════════════ UI HELPERS ════════════
+// ══════════════════════════════════════════════════════
+// UI HELPERS
+// ══════════════════════════════════════════════════════
 function setCountry(c, btn){
   COUNTRY = c;
-  document.querySelectorAll('.cbtn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.cbtn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
 }
-function fillSearch(t){ document.getElementById('searchInput').value = t; doSearch(); }
+function fillSearch(t){ document.getElementById('searchInput').value=t; doSearch(); }
 function showErr(m){ const e=document.getElementById('errBox'); e.innerHTML='⚠️ '+m; e.style.display='block'; }
 function hideErr(){ document.getElementById('errBox').style.display='none'; }
 
 const MSGS = [
-  '🔍 Querying Google Shopping...','🏪 Searching Egyptian markets...',
-  '📱 Scanning Facebook & OLX...','💰 Comparing prices...',
-  '📦 Checking Amazon & Noon...','🛒 Looking at Carrefour & Jumia...',
-  '📊 Sorting cheapest first...','✅ Almost ready...'
+  '🔍 Querying Google Shopping Egypt...',
+  '🏪 Searching Carrefour & Amazon.eg...',
+  '📱 Scanning Facebook Marketplace & OLX...',
+  '💰 Comparing EGP prices...',
+  '📦 Checking Noon & Jumia...',
+  '🛒 Looking at B.TECH & Raneen...',
+  '📊 Sorting cheapest first...',
+  '✅ Almost ready...'
 ];
 let msgT;
 function startLoad(){
   let i=0;
   const el = document.getElementById('loadMsg');
   el.textContent = MSGS[0];
-  msgT = setInterval(()=>{ i=(i+1)%MSGS.length; el.textContent=MSGS[i]; }, 1500);
+  msgT = setInterval(()=>{ i=(i+1)%MSGS.length; el.textContent=MSGS[i]; }, 1600);
   const b = document.getElementById('pgbar');
-  b.style.animation='none'; b.offsetHeight; b.style.animation='pg 4s ease-out forwards';
+  b.style.animation='none'; b.offsetHeight; b.style.animation='pg 5s ease-out forwards';
 }
 function stopLoad(){ clearInterval(msgT); }
 
-// ════════════ API CALLS ════════════
-// All calls go to /api/search — same domain, no CORS issue
-async function callSearch(params){
+// ══════════════════════════════════════════════════════
+// API — ALL calls go through /api/search (same domain)
+// ══════════════════════════════════════════════════════
+async function callProxy(params){
   const p = new URLSearchParams(params);
   const r = await fetch(`/api/search?${p}`, { signal: AbortSignal.timeout(15000) });
   if(!r.ok){
@@ -463,21 +421,9 @@ async function callSearch(params){
   return r.json();
 }
 
-async function callFood(query){
-  try{
-    const r = await fetch(`https://world.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(query)}&json=1&page_size=8&fields=product_name,brands,stores,image_url,quantity`);
-    return r.json();
-  }catch{ return {products:[]}; }
-}
-
-async function callUPC(query){
-  try{
-    const r = await fetch(`https://api.upcitemdb.com/prod/trial/search?s=${encodeURIComponent(query)}&type=product`);
-    return r.json();
-  }catch{ return {items:[]}; }
-}
-
-// ════════════ NORMALISE ════════════
+// ══════════════════════════════════════════════════════
+// NORMALISE — merge all sources into unified list
+// ══════════════════════════════════════════════════════
 function normalise(shopD, organicD, foodD, upcD, query){
   const out = [], seen = new Set();
 
@@ -486,51 +432,86 @@ function normalise(shopD, organicD, foodD, upcD, query){
     if(seen.has(id)) return; seen.add(id); out.push(o);
   }
 
-  // Google Shopping — real prices ✅
+  // ── Google Shopping — primary price source ──
   (shopD?.shopping_results||[]).forEach(x=>{
-    const raw = x.extracted_price ?? x.price;
-    const price = typeof raw==='number' ? raw :
-                  typeof raw==='string' ? parseFloat(raw.replace(/[^0-9.]/g,''))||null : null;
-    add({ store:x.source||'Google Shopping', brand:x.brand||'', title:x.title||query,
-          price, price_display:x.price||null, url:x.link||x.product_link||null,
-          image:x.thumbnail||null, source:'Google Shopping', cat:'shopping',
-          rating:x.rating||null });
+    const raw   = x.extracted_price ?? x.price;
+    const price = typeof raw==='number' ? raw
+                : typeof raw==='string' ? (parseFloat(raw.replace(/[^0-9.]/g,''))||null)
+                : null;
+    add({
+      store:         x.source || 'Google Shopping',
+      brand:         x.brand  || '',
+      title:         x.title  || query,
+      price,
+      price_display: x.price  || null,
+      url:           x.link   || x.product_link || null,
+      image:         x.thumbnail || null,
+      source:        'Google Shopping',
+      cat:           'shopping',
+      rating:        x.rating || null,
+    });
   });
 
-  // Organic — social media + Egyptian store pages
+  // ── Google organic — social media + Egyptian stores ──
   (organicD?.organic_results||[]).forEach(x=>{
     const isSoc = /facebook|instagram|olx|telegram|tiktok/i.test(x.link||'');
     const isEg  = /carrefour|amazon\.eg|noon|jumia|talabat|btech|2b\.com|raneen|otlob|elgrocer/i.test(x.link||'');
     if(!isSoc && !isEg) return;
-    const pm = (x.snippet||'').match(/([\d,]+(?:\.\d+)?)\s*(EGP|LE|جنيه|USD|\$|SAR|AED|£)/i) ||
-               (x.snippet||'').match(/(EGP|LE|\$|جنيه)\s*([\d,]+)/i);
-    const price = pm ? parseFloat((pm[1]||pm[2]).replace(/,/g,'')) : null;
-    const host = (()=>{ try{ return new URL(x.link).hostname.replace('www.',''); }catch{ return x.displayed_link||''; }})();
-    add({ store:host, brand:'', title:x.title||query, price,
-          price_display:pm?pm[0]:null, url:x.link, image:x.thumbnail||null,
-          source:isSoc?'Social Media':'Egypt Store', cat:isSoc?'social':'shopping',
-          snippet:(x.snippet||'').slice(0,100) });
-  });
 
-  // UPC Item DB
-  (upcD?.items||[]).forEach(item=>{
-    (item.offers||[]).forEach(o=>{
-      add({ store:o.merchant||'Online Store', brand:item.brand||'', title:item.title||query,
-            price:o.price||null, price_display:o.price?`$${o.price}`:null,
-            url:o.link||null, image:(item.images||[])[0]||null,
-            source:'UPC Database', cat:'shopping' });
+    // Try to extract price from snippet (EGP, LE, جنيه)
+    const pm = (x.snippet||'').match(/([\d,]+(?:\.\d+)?)\s*(EGP|LE|جنيه)/i)
+            || (x.snippet||'').match(/(EGP|LE|جنيه)\s*([\d,]+)/i);
+    const price = pm ? parseFloat((pm[1]||pm[2]).replace(/,/g,'')) : null;
+    const host  = (()=>{ try{ return new URL(x.link).hostname.replace('www.',''); }catch{ return x.displayed_link||''; }})();
+
+    add({
+      store:         host,
+      brand:         '',
+      title:         x.title   || query,
+      price,
+      price_display: pm ? pm[0]+' EGP' : null,
+      url:           x.link,
+      image:         x.thumbnail || null,
+      source:        isSoc ? 'Social Media' : 'Egypt Store',
+      cat:           isSoc ? 'social' : 'shopping',
+      snippet:       (x.snippet||'').slice(0,110),
     });
   });
 
-  // Open Food Facts — brand/store, no price
-  (foodD?.products||[]).slice(0,4).forEach(p=>{
-    if(!p.product_name) return;
-    add({ store:p.stores?p.stores.split(',')[0].trim():'Food Store', brand:p.brands||'',
-          title:p.product_name||query, price:null, price_display:null,
-          url:null, image:p.image_url||null, source:'Open Food Facts', cat:'shopping' });
+  // ── UPC Item DB ──
+  (upcD?.items||[]).forEach(item=>{
+    (item.offers||[]).forEach(o=>{
+      add({
+        store:         o.merchant || 'Online Store',
+        brand:         item.brand || '',
+        title:         item.title || query,
+        price:         o.price    || null,
+        price_display: o.price    ? `$${o.price}` : null,
+        url:           o.link     || null,
+        image:         (item.images||[])[0] || null,
+        source:        'UPC Database',
+        cat:           'shopping',
+      });
+    });
   });
 
-  // Sort: priced first cheapest→expensive, then unpriced
+  // ── Open Food Facts ──
+  (foodD?.products||[]).slice(0,4).forEach(p=>{
+    if(!p.product_name) return;
+    add({
+      store:         p.stores ? p.stores.split(',')[0].trim() : 'Food Store',
+      brand:         p.brands || '',
+      title:         p.product_name || query,
+      price:         null,
+      price_display: null,
+      url:           null,
+      image:         p.image_url || null,
+      source:        'Open Food Facts',
+      cat:           'shopping',
+    });
+  });
+
+  // Sort: priced first cheapest→expensive, unpriced last
   out.sort((a,b)=>{
     if(a.price!==null && b.price!==null) return a.price - b.price;
     if(a.price!==null) return -1;
@@ -540,7 +521,9 @@ function normalise(shopD, organicD, foodD, upcD, query){
   return out;
 }
 
-// ════════════ MAIN SEARCH ════════════
+// ══════════════════════════════════════════════════════
+// MAIN SEARCH
+// ══════════════════════════════════════════════════════
 async function doSearch(){
   const raw = document.getElementById('searchInput').value.trim();
   if(!raw){ document.getElementById('searchInput').focus(); return; }
@@ -552,16 +535,21 @@ async function doSearch(){
   document.getElementById('searchBtn').disabled = true;
   startLoad();
 
-  const c = CC[COUNTRY];
+  const isArabic   = /[\u0600-\u06FF]/.test(raw);
+  const ck         = COUNTRY_KEYWORDS[COUNTRY] || COUNTRY_KEYWORDS.eg;
+  const keyword    = isArabic ? ck.ar : ck.en;
 
-  // Social query targets Egypt social + store pages specifically
-  const socialQ = `${raw} site:facebook.com OR site:olx.com.eg OR site:instagram.com OR site:noon.com OR site:jumia.com.eg OR site:carrefouregypt.com OR site:amazon.eg`;
+  // Shopping query — append country keyword so Google returns local results
+  const shopQ      = `${raw} ${keyword}`;
+
+  // Social/organic query — target Egyptian platforms by domain
+  const socialQ    = `${raw} ${keyword} site:facebook.com OR site:olx.com.eg OR site:instagram.com OR site:noon.com OR site:jumia.com.eg OR site:carrefouregypt.com OR site:amazon.eg OR site:btech.com OR site:2b.com.eg`;
 
   const [r1,r2,r3,r4] = await Promise.allSettled([
-    callSearch({ engine:'google_shopping', q:raw, gl:c.gl, hl:c.hl, num:20 }),
-    callSearch({ engine:'google',          q:socialQ, gl:c.gl, hl:c.hl, num:10 }),
-    callFood(raw),
-    callUPC(raw),
+    callProxy({ source:'serp', engine:'google_shopping', q:shopQ,   country:COUNTRY }),
+    callProxy({ source:'serp', engine:'google',          q:socialQ, country:COUNTRY }),
+    callProxy({ source:'food', q:raw }),
+    callProxy({ source:'upc',  q:raw }),
   ]);
 
   stopLoad();
@@ -570,49 +558,59 @@ async function doSearch(){
 
   let shopD={}, organicD={}, foodD={products:[]}, upcD={items:[]};
 
-  if(r1.status==='fulfilled')       shopD   = r1.value;
-  else showErr(`Search error: ${r1.reason?.message||'Unknown error'}. Check that SERPAPI_KEY is set in Vercel environment variables. <a href="https://vercel.com/docs/projects/environment-variables" target="_blank" style="color:var(--accent)">How to add env vars →</a>`);
+  if(r1.status==='fulfilled')      shopD   = r1.value;
+  else showErr(`Search error: ${r1.reason?.message||'Unknown'}. Make sure SERPAPI_KEY is set in Vercel → Settings → Environment Variables.`);
 
   if(r2.status==='fulfilled') organicD = r2.value;
   if(r3.status==='fulfilled') foodD    = r3.value;
   if(r4.status==='fulfilled') upcD     = r4.value;
 
   lastResults = normalise(shopD, organicD, foodD, upcD, raw);
-  activeTab = 'all';
+  activeTab   = 'all';
   renderAll();
 
   document.getElementById('resWrap').style.display = 'block';
   document.getElementById('resWrap').scrollIntoView({ behavior:'smooth', block:'start' });
 }
 
-// ════════════ RENDER ════════════
+// ══════════════════════════════════════════════════════
+// RENDER
+// ══════════════════════════════════════════════════════
 function renderAll(){
-  const qEnc   = encodeURIComponent(lastQuery);
-  const stores = STORES[COUNTRY] || STORES.global;
+  const qEnc    = encodeURIComponent(lastQuery);
+  const stores  = STORES[COUNTRY] || STORES.global;
   const all     = lastResults;
   const shopping = all.filter(r=>r.cat==='shopping');
   const social   = all.filter(r=>r.cat==='social');
   const priced   = all.filter(r=>r.price!==null);
+
+  // Safe price range — no NaN
   const minP = priced.length ? Math.min(...priced.map(r=>r.price)) : null;
   const maxP = priced.length ? Math.max(...priced.map(r=>r.price)) : null;
-  const fP = p => p!==null ? p.toLocaleString(undefined,{minimumFractionDigits:0,maximumFractionDigits:2}) : '';
+  const fP   = p => (p !== null && !isNaN(p))
+    ? p.toLocaleString(undefined,{minimumFractionDigits:0,maximumFractionDigits:2})
+    : null;
+
+  const ck       = COUNTRY_KEYWORDS[COUNTRY] || COUNTRY_KEYWORDS.eg;
+  const currency = ck.currency;
 
   // Summary bar
+  const minFmt = fP(minP);
+  const maxFmt = fP(maxP);
   document.getElementById('sumbar').innerHTML = `
     <span class="sq">🔍 "${lastQuery}"</span>
     <span class="ss">📦 ${all.length} results</span>
-    ${priced.length ? `<span class="ss hi">💰 ${fP(minP)} – ${fP(maxP)}</span>` : ''}
-    <span class="ss">📱 ${social.length} social listings</span>
-    <span class="ss">🌍 ${CC[COUNTRY].label}</span>
+    ${minFmt && maxFmt ? `<span class="ss hi">💰 ${minFmt}${currency?' '+currency:''} – ${maxFmt}${currency?' '+currency:''}</span>` : '<span class="ss">💰 See prices below</span>'}
+    <span class="ss">📱 ${social.length} social</span>
+    <span class="ss gr">🌍 ${ck.label}</span>
   `;
 
   // Tabs
-  const tabs = [
-    { id:'all',      lbl:'All Results',  cnt:all.length,       ico:'🔍' },
-    { id:'shopping', lbl:'Stores',       cnt:shopping.length,  ico:'🏪' },
-    { id:'social',   lbl:'Social Media', cnt:social.length,    ico:'📱' },
-  ];
-  document.getElementById('tabsRow').innerHTML = tabs.map(t=>`
+  document.getElementById('tabsRow').innerHTML = [
+    {id:'all',      lbl:'All Results',  cnt:all.length,      ico:'🔍'},
+    {id:'shopping', lbl:'Stores',       cnt:shopping.length, ico:'🏪'},
+    {id:'social',   lbl:'Social Media', cnt:social.length,   ico:'📱'},
+  ].map(t=>`
     <button class="tab ${activeTab===t.id?'active':''}" onclick="switchTab('${t.id}')">
       ${t.ico} ${t.lbl}<span class="cnt">${t.cnt}</span>
     </button>`).join('');
@@ -628,16 +626,18 @@ function renderAll(){
   // Recommendation
   const rb = document.getElementById('recbox');
   if(priced.length > 0){
-    const c = all.find(r=>r.price!==null);
-    const pf = c.price_display || fP(c.price);
+    const c  = priced[0]; // already sorted cheapest first
+    const pf = c.price_display || (fP(c.price) ? `${fP(c.price)}${currency?' '+currency:''}` : null);
     document.getElementById('rtext').innerHTML =
-      `Based on <strong>${all.length} results</strong>, <strong>${c.store}</strong> shows the lowest listed price at `+
-      `<strong style="color:var(--accent)">${pf}</strong> for "<em>${c.title}</em>".<br><br>`+
-      `Found <strong>${social.length} social media listings</strong> on Facebook Marketplace, OLX &amp; Instagram — prices there are often negotiable. `+
+      `Based on <strong>${all.length} results</strong>, <strong>${c.store}</strong> has the lowest listed price at `+
+      `<strong style="color:var(--accent)">${pf||'check site'}</strong> for "<em>${c.title}</em>".<br><br>`+
+      `${social.length>0 ? `Found <strong>${social.length} social media listings</strong> on Facebook Marketplace, OLX & Instagram — prices there are often negotiable. ` : ''}`+
       `Always verify live prices on the store page before purchasing.`;
     rb.style.display = 'block';
   } else {
-    rb.style.display = 'none';
+    document.getElementById('rtext').innerHTML =
+      `No prices found in database results. Use the store buttons above to search live prices directly on Carrefour, Amazon.eg, Noon and other platforms.`;
+    rb.style.display = 'block';
   }
 }
 
@@ -654,36 +654,42 @@ function switchTab(tab){
 }
 
 function renderCards(){
-  const qEnc   = encodeURIComponent(lastQuery);
-  const stores = STORES[COUNTRY] || STORES.global;
+  const qEnc    = encodeURIComponent(lastQuery);
+  const stores  = STORES[COUNTRY] || STORES.global;
   const fallback = Object.values(stores).flat()[0]?.u(qEnc) || '#';
+  const ck       = COUNTRY_KEYWORDS[COUNTRY] || COUNTRY_KEYWORDS.eg;
+  const fP       = p => (p!==null && !isNaN(p))
+    ? p.toLocaleString(undefined,{minimumFractionDigits:0,maximumFractionDigits:2})
+    : null;
 
   let filtered = lastResults;
   if(activeTab==='shopping') filtered = lastResults.filter(r=>r.cat==='shopping');
   if(activeTab==='social')   filtered = lastResults.filter(r=>r.cat==='social');
 
-  if(filtered.length === 0){
+  if(filtered.length===0){
     document.getElementById('cardSec').innerHTML=`
       <div class="cgrid"><div class="nores">
         <h3>No results in this category</h3>
-        <p>Try another tab or use the store buttons above to search directly on each platform.</p>
+        <p>Try another tab or use the store buttons above to search directly.</p>
       </div></div>`;
     return;
   }
 
   document.getElementById('cardSec').innerHTML = `<div class="cgrid">${
     filtered.slice(0,24).map((r,i)=>{
-      const url = r.url || fallback;
-      const pf  = r.price_display || (r.price!==null ? r.price.toLocaleString() : null);
+      const url  = r.url || fallback;
+      const pRaw = fP(r.price);
+      const pf   = r.price_display || (pRaw ? `${pRaw} ${ck.currency}`.trim() : null);
       const isSoc = r.cat==='social';
       const srcCls = isSoc?'p': r.source==='Google Shopping'?'b':'';
+
       return `<div class="card ${i===0&&r.price!==null?'rank1':''} ${isSoc?'soccard':''}" style="animation-delay:${i*.04}s">
         <p class="crnk">#${i+1}</p>
         ${r.image?`<img class="cimg" src="${r.image}" alt="" loading="lazy" onerror="this.style.display='none'">`:''}
         <p class="cstore">${r.store}</p>
         ${r.brand?`<p class="cbrand">${r.brand}</p>`:''}
         <p class="ctitle">${r.title}</p>
-        ${pf?`<p class="cprice">${pf}</p>`:`<p class="cprice np">Check price on site</p>`}
+        ${pf ? `<p class="cprice">${pf}</p>` : `<p class="cprice np">Check price on site</p>`}
         ${r.snippet?`<p class="csnip">${r.snippet}</p>`:''}
         <div class="cmeta">
           ${r.rating?`<span class="mb o">⭐ ${r.rating}</span>`:''}
@@ -698,7 +704,9 @@ function renderCards(){
   }</div>`;
 }
 
-// ════════════ INIT ════════════
+// ══════════════════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════════════════
 document.getElementById('searchInput').addEventListener('keydown', e=>{
   if(e.key==='Enter') doSearch();
 });
